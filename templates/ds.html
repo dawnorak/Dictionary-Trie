@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+    body{
+        background-image: url('download.png');
+        background-size: 120%;
+    }
+    #search{
+        background-color: rgb(0, 0, 0,0.7);
+        position: relative;
+        border-radius: 10px;
+        color: white;
+        display: block;
+        width: 400px;
+        height: 300px;
+        padding:40px;
+        margin-left: 30vw;
+        margin-top: 15vh;
+    }
+    #result{
+        display: block;
+        position: absolute;
+        background-color: aliceblue;
+        color: black;
+        border-radius: 10px;
+        height:40%;
+        width: 75%;
+        top: 35%;
+    }
+    #keyword{
+        border-radius: 5px;
+        width:15vw;
+        height: 30px;
+    }
+    #btn{
+        width: 5vw;
+        height: 5vh;
+    }
+</style>
+<body>
+    <div id="search">
+        <form action="/submit" class="main" id="d_video" method="post">
+            <label for="Enter_keyword">Enter Keyword:</label>
+            <input type="text" id="keyword" name="keyword" placeholder="Enter Here" required><br>
+            <center><button type="submit" id="btn">Submit</button></center>
+        </form>
+    <div id="result" style="padding: 20px;">
+        {{msg}}
+    </div>
+    </div>  
+</body>
+</html>
